@@ -1,0 +1,89 @@
+/* Style for the root AnchorPane */
+.root {
+    -fx-background-color: #f3f2ef;
+    -fx-padding: 20;
+}
+
+/* Style for the title label */
+.title-label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style for the skills scroll pane */
+.skills-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Style for the VBox containing skills */
+.skills-container {
+    -fx-background-color: #fff;
+    -fx-padding: 10;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Style for each skill item */
+.skill-item {
+    -fx-background-color: #e1e1e1;
+    -fx-padding: 10;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+}
+
+/* Style for the skill text */
+.skill-text {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* Style for the order number */
+.skill-number {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+/* Style for the remove button */
+.remove-button {
+    -fx-background-color: #ff6b6b;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+}
+
+/* Style for the add skill button */
+.add-skill-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.add-skill-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Style for the close button */
+#closeBtn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 18px;
+}
+
+#closeBtn:hover {
+    -fx-text-fill: #ff6b6b;
+}

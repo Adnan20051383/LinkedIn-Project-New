@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" stylesheets="@styleFeed.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.linkedinclient.FeedController">
+  <!-- Top Navigation Bar -->
+  <top>
+    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="top-bar">
+      <ImageView fitHeight="30" fitWidth="133.0">
+        <image>
+          <Image url="@img/linkedin.png" />
+        </image>
+      </ImageView>
+         <Region HBox.hgrow="ALWAYS" />
+      <Button style="-fx-background-color: #ccc;" styleClass="nav-button" text="Home" textAlignment="JUSTIFY">
+        <graphic>
+          <FontAwesomeIconView glyphName="HOME" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+      <Button fx:id="networkBtn" styleClass="nav-button" text="My Network">
+        <graphic>
+          <FontAwesomeIconView glyphName="USERS" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+      <Button fx:id="jobsBtn" styleClass="nav-button" text="Jobs">
+        <graphic>
+          <FontAwesomeIconView glyphName="BRIEFCASE" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+      <Button fx:id="msgBtn" styleClass="nav-button" text="Messaging">
+        <graphic>
+          <FontAwesomeIconView glyphName="COMMENT" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+      <Button fx:id="notifBtn" styleClass="nav-button" text="Notifications">
+        <graphic>
+          <FontAwesomeIconView glyphName="BELL" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+      <Button fx:id="meBtn" onAction="#meBtnClicked" styleClass="nav-button" text="Me">
+        <graphic>
+          <FontAwesomeIconView glyphName="USER" />
+        </graphic>
+        <cursor>
+          <Cursor fx:constant="HAND" />
+        </cursor>
+        <font>
+          <Font name="FontAwesome" size="12.0" />
+        </font>
+      </Button>
+         <Region HBox.hgrow="ALWAYS" />
+      <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+    </HBox>
+  </top>
+
+  <!-- Left Sidebar -->
+  <left>
+    <VBox styleClass="sidebar">
+      <!-- Profile Section -->
+      <StackPane styleClass="profile-pane">
+        <ImageView fx:id="profileImgView" fitHeight="50" fitWidth="50.0" scaleX="1.4" scaleY="1.4">
+          <image>
+            <Image url="@img/logo.png" />
+          </image>
+          <clip>
+            <Circle centerX="25" centerY="25" radius="25" />
+          </clip>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+        </ImageView>
+        <VBox alignment="CENTER" spacing="5.0" />
+      </StackPane>
+         <Label fx:id="userNameLabel" alignment="CENTER" prefHeight="17.0" prefWidth="163.0" textAlignment="CENTER">
+            <font>
+               <Font name="FontAwesome" size="14.0" />
+            </font>
+         </Label>
+
+      <!-- Sidebar Items -->
+      <VBox styleClass="sidebar-items">
+        <HBox spacing="10" styleClass="sidebar-item">
+          <FontAwesomeIconView glyphName="PLUS" />
+          <Label text="Connection" />
+        </HBox>
+        <HBox spacing="10" styleClass="sidebar-item">
+          <FontAwesomeIconView glyphName="HASHTAG" />
+          <Label text="Followed Hashtags" />
+        </HBox>
+        <HBox spacing="10" styleClass="sidebar-item">
+          <FontAwesomeIconView glyphName="CALENDAR" />
+          <Label text="Events" />
+        </HBox>
+        <!-- Add more sidebar items as needed -->
+      </VBox>
+    </VBox>
+  </left>
+
+  <!-- Center Feed -->
+  <center>
+    <ScrollPane fitToHeight="true" fitToWidth="true">
+      <VBox fx:id="feedVBox" spacing="10" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+        <padding>
+          <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <!-- Post Creation Section -->
+        <VBox fx:id="postCreationVBox" spacing="10" style="-fx-background-color: #e6e6f7;" styleClass="post-box">
+          <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+          </padding>
+          <HBox alignment="CENTER">
+            <Label styleClass="post-header" text="Create a post" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="postButton" onMouseClicked="#OnMouseClickedPostBtn" styleClass="post-button" text="Post" visible="false">
+              <graphic>
+                <FontAwesomeIconView glyphName="PAPER_PLANE" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+            </Button>
+          </HBox>
+          <TextArea fx:id="postTextArea" onMouseClicked="#onMouseClickedTextArea" prefRowCount="3" promptText="What do you want to talk about?" styleClass="post-text-area" />
+          <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="mediaBtn" onMouseClicked="#OnMouseClickedMediaBtn" styleClass="post-button" text="Media">
+              <graphic>
+                <FontAwesomeIconView fill="#ce7230" glyphName="PHOTO" selectionFill="#8a8a8a" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Button>
+            <Button fx:id="EventBtn" styleClass="post-button" text="Event" textFill="#e6e6f7">
+              <graphic>
+                <FontAwesomeIconView fill="#438f4f" glyphName="CALENDAR" selectionFill="#271616" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Button>
+            <Button fx:id="articleBtn" onMouseClicked="#OnMouseClickedArticleBtn" styleClass="post-button" text="Write article">
+              <graphic>
+                <FontAwesomeIconView fill="#351ced" glyphName="PENCIL" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Button>
+          </HBox>
+        </VBox>
+      </VBox>
+    </ScrollPane>
+  </center>
+
+  <!-- Right Sidebar -->
+  <right>
+    <VBox spacing="10" styleClass="sidebar" BorderPane.alignment="CENTER">
+      <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+      </padding>
+      <Label styleClass="sidebar-header" text="LinkedIn News" />
+      <Label styleClass="sidebar-item" text="News Item 1" />
+      <Label styleClass="sidebar-item" text="News Item 2" />
+      <Label styleClass="sidebar-item" text="News Item 3" />
+    </VBox>
+  </right>
+</BorderPane>

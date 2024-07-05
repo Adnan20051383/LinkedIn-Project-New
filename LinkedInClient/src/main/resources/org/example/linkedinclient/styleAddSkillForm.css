@@ -1,0 +1,65 @@
+/* Style for the root AnchorPane */
+.root {
+    -fx-background-color: #f3f2ef;
+    -fx-padding: 20;
+}
+
+/* Style for the title label */
+.form-title {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style for the input labels */
+.input-label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* Style for the input fields */
+.input-field {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #fff;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+}
+
+/* Style for the buttons */
+.cancel-button {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #c9302c;
+}
+
+.save-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.save-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Style for the error label */
+#errorLabel {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+}

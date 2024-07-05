@@ -1,0 +1,63 @@
+/* Apply this style to the VBox */
+.root {
+    -fx-background-color: #f3f2ef;
+    -fx-padding: 20;
+}
+
+/* Style for the form title */
+.form-title {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style for input labels */
+.input-label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+/* Style for TextArea */
+.input-field {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #0073b1;
+    -fx-box-shadow: 0 0 5px rgba(0, 115, 177, 0.5);
+}
+
+/* Style for buttons */
+.cancel-button {
+    -fx-background-color: #d1d1d1;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #b0b0b0;
+}
+
+.save-button {
+    -fx-background-color: #0073b1;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.save-button:hover {
+    -fx-background-color: #005f8d;
+}

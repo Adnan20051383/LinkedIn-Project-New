@@ -1,0 +1,56 @@
+.root {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.input-field {
+    -fx-padding: 10px;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #fff;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #007bff;
+    -fx-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.save-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.save-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.cancel-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #5a6268;
+}

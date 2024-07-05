@@ -1,0 +1,29 @@
+/* Style for the root AnchorPane */
+.root {
+    -fx-background-color: #f3f2ef;
+    -fx-padding: 20;
+}
+
+/* Style for the page title */
+.page-title {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style for the followers container */
+.followers-container {
+    -fx-background-color: #fff;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+/* Style for the followers scroll pane */
+.followers-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-border-radius: 5;
+}

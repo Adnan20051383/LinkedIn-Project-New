@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="600" stylesheets="@styleComment.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.linkedinclient.CommentController">
+
+   <HBox alignment="CENTER">
+      <!-- Logo Image -->
+      <ImageView fitHeight="50.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+
+      <!-- Spacer -->
+      <Region prefHeight="2.0" prefWidth="524.0" HBox.hgrow="ALWAYS" />
+      <FontAwesomeIconView fx:id="closeBtn" glyphName="TIMES" onMouseClicked="#OnMouseClickedCloseBtn" size="20" styleClass="close-icon">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+
+      <!-- Close Button -->
+      <Button onMouseClicked="#OnMouseClickedCloseBtn" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets right="10" top="10" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </HBox>
+
+   <VBox fx:id="postBox" prefHeight="200.0" spacing="10" styleClass="post-box">
+      <padding>
+         <Insets bottom="10" left="10" right="10" top="10" />
+      </padding>
+      <style>
+         -fx-background-color: #ffffff;
+         -fx-border-color: #dddddd;
+         -fx-border-radius: 5;
+         -fx-background-radius: 5;
+      </style>
+
+      <!-- Post Header -->
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <!-- Profile Image -->
+            <ImageView fx:id="profPostImgView" fitHeight="50" fitWidth="50.0" nodeOrientation="INHERIT">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+               <clip>
+                  <Circle centerX="25" centerY="25" radius="25" />
+               </clip>
+            </ImageView>
+            <Label fx:id="posterIdLabel">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Region prefHeight="26.0" prefWidth="440.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="postHeaderLabel" styleClass="post-header" />
+            <Button fx:id="followButton" onMouseClicked="#OnMouseClickedPostFollowBtn" onMouseEntered="#OnMouseEnteredFollowBtn" onMouseExited="#OnMouseExitedFollowBtn" style="-fx-background-color: #0598ff; -fx-text-fill: white;" text="Follow">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_PLUS" styleClass="followIcon" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <HBox.hgrow>
+            <Priority fx:value="ALWAYS" />
+         </HBox.hgrow>
+      </HBox>
+
+      <!-- ScrollPane for Post Content -->
+      <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="scroll-pane-label">
+         <content>
+            <Label fx:id="postContentLabel" wrapText="true" />
+         </content>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ScrollPane>
+      <Label fx:id="commentCountLabel">
+         <font>
+            <Font name="FontAwesome" size="13.0" />
+         </font>
+      </Label>
+
+      <!-- Post Actions -->
+      <HBox alignment="CENTER" spacing="10">
+         <children>
+            <Button fx:id="likeButton" onMouseClicked="#OnMouseClickedLikeBtn" onMouseEntered="#OnMouseEnteredLikeBtn" onMouseExited="#OnMouseExitedLikeBtn" style="-fx-background-color: transparent; -fx-text-fill: #0598ff;" text="Like">
+               <graphic>
+                  <FontAwesomeIconView fill="#0598ff" glyphName="THUMBS_UP" styleClass="thumbIcon" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="shareButton" onMouseClicked="#OnMouseClickedShareBtn" onMouseEntered="#OnMouseEnteredShareBtn" onMouseExited="#OnMouseExitedShareBtn" style="-fx-background-color: transparent; -fx-text-fill: #e33b6b;" text="Share">
+               <graphic>
+                  <FontAwesomeIconView fill="#e33b6b" glyphName="SHARE" styleClass="shareIcon" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+
+      <!-- Timeline Label -->
+      <Label fx:id="timelineLabel" styleClass="timeline-label" />
+   </VBox>
+
+   <VBox styleClass="comment-container" VBox.vgrow="ALWAYS">
+      <!-- Comments section -->
+      <ScrollPane fitToWidth="true" prefHeight="371.0" prefWidth="580.0" styleClass="comment-scrollpane">
+         <VBox fx:id="commentsBox" styleClass="comments-box" />
+      </ScrollPane>
+   </VBox>
+
+   <VBox fx:id="postCreationVBox" prefHeight="143.0" prefWidth="600.0" spacing="10" style="-fx-background-color: #e6e6f7;" styleClass="post-box">
+      <padding>
+         <Insets bottom="10" left="10" right="10" top="10" />
+      </padding>
+      <children>
+         <HBox alignment="CENTER">
+            <children>
+               <Label styleClass="post-header" text="Create a comment">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <Region HBox.hgrow="ALWAYS" />
+               <Button fx:id="postButton" onMouseClicked="#OnMouseClickedPostBtn" styleClass="post-button" text="Post" visible="false">
+                  <graphic>
+                     <FontAwesomeIconView glyphName="PAPER_PLANE" />
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+            </children>
+         </HBox>
+         <TextArea fx:id="postTextArea" onMouseClicked="#onMouseClickedTextArea" prefRowCount="3" promptText="What do you want to talk about?" styleClass="post-text-area" />
+         <HBox alignment="CENTER" spacing="20">
+            <children>
+               <Button fx:id="mediaBtn" onMouseClicked="#OnMouseClickedMediaBtn" styleClass="post-button" text="Media">
+                  <graphic>
+                     <FontAwesomeIconView fill="#ce7230" glyphName="PHOTO" selectionFill="#8a8a8a" />
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="EventBtn" styleClass="post-button" text="Event" textFill="#e6e6f7">
+                  <graphic>
+                     <FontAwesomeIconView fill="#438f4f" glyphName="CALENDAR" selectionFill="#271616" />
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="articleBtn" onMouseClicked="#OnMouseClickedArticleBtn" styleClass="post-button" text="Write article">
+                  <graphic>
+                     <FontAwesomeIconView fill="#351ced" glyphName="PENCIL" />
+                  </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+            </children>
+         </HBox>
+      </children>
+   </VBox>
+
+</VBox>

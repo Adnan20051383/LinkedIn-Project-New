@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbc5dc26-566b-4f47-b0ae-97db240a2658" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Education.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/FeedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Follow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Like.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/LogInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/ProfileViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/SignInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/java/org/example/linkedinclient/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/commentSection.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/img/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/profileView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/styleComment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/styleFeed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LinkedInClient/src/main/resources/org/example/linkedinclient/styleProfileView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../adnanFeed/src/main/java/org/example/adnanfeed/LinkedInFeedApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/handlers/MediaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/handlers/LikeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/handlers/LikeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/models/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/models/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/adnan/server/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/adnan/server/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2ij8PNFW0U6F37uNjnFp9Eggwu4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "AdnanChanges",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/3500-/Desktop/LinkedIn Project/untitled/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbc5dc26-566b-4f47-b0ae-97db240a2658" name="Changes" comment="" />
+      <created>1719992605317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719992605317</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.linkedinclient.UserProfilePageController">
+    <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <children>
+                <Button fx:id="followBtn" onAction="#followBtnClicked" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: green; -fx-text-fill: white;" styleClass="logOutBtn" text="Follow" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+                </Button>
+                <Region prefHeight="27.0" prefWidth="305.0" HBox.hgrow="ALWAYS" />
+                <FontAwesomeIconView fx:id="closeBtn" fill="RED" glyphName="CLOSE" onMouseClicked="#OnMouseClickedCloseBtn" size="18">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </FontAwesomeIconView>
+            </children>
+        </HBox>
+
+        <!-- Profile Picture and Name -->
+        <HBox alignment="CENTER_LEFT" prefHeight="107.0" prefWidth="562.0" spacing="20">
+            <HBox>
+                <children>
+                    <VBox alignment="TOP_CENTER" style="-fx-border-width: 0 0 0 0;">
+                        <children>
+                            <Label fx:id="followersLabel" onMouseClicked="#OnMouseClickedShowFollowersBtn" text="Followers">
+                                <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Label>
+                            <Label fx:id="followersCountLabel" onMouseClicked="#OnMouseClickedShowFollowersBtn">
+                                <font>
+                                    <Font name="Arial" size="14.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Label>
+                        </children>
+                    </VBox>
+                    <VBox alignment="TOP_CENTER" style="-fx-border-width: 0 0 0 0;">
+                        <children>
+                            <Label fx:id="followingsLabel" onMouseClicked="#OnMouseClickedShowFollowingsBtn" text="Followings">
+                                <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Label>
+                            <Label fx:id="followingsCountLabel" onMouseClicked="#OnMouseClickedShowFollowingsBtn">
+                                <font>
+                                    <Font name="Arial" size="14.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Label>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+         <Region />
+            <StackPane alignment="BASELINE_CENTER" styleClass="profile-image-pane">
+                <ImageView fx:id="profileImageView" fitHeight="120.0" fitWidth="120.0" styleClass="profile-image">
+                    <image>
+                        <Image url="@img/logo.png" />
+                    </image>
+                </ImageView>
+            </StackPane>
+            <VBox alignment="CENTER_LEFT">
+                <Label fx:id="nameLabel" styleClass="name-label">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="headlineLabel" styleClass="headline-label">
+                    <font>
+                        <Font name="Arial" size="16.0" />
+                    </font>
+                </Label>
+            </VBox>
+        </HBox>
+
+        <!-- Contact Information -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label styleClass="info-label" text="Email:">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="emailLabel" styleClass="info-text">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label styleClass="info-label" text="Phone:">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="phoneLabel" styleClass="info-text">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </HBox>
+
+        <!-- Summary -->
+        <TitledPane expanded="false" onMouseClicked="#OnMouseClickedSumBtn" styleClass="custom-titled-pane" text="Summary">
+            <content>
+                <VBox>
+                    <TextArea fx:id="summaryTextArea" editable="false" wrapText="true">
+                        <VBox.margin>
+                            <Insets bottom="10" left="10" right="10" top="10" />
+                        </VBox.margin>
+                        <font>
+                            <Font name="Arial Italic" size="14.0" />
+                        </font>
+                    </TextArea>
+                </VBox>
+            </content>
+            <graphic>
+                <HBox alignment="CENTER_RIGHT" spacing="5">
+                    <children>
+                        <FontAwesomeIconView glyphName="USER" size="18" styleClass="edit-icon" />
+                    </children>
+                </HBox>
+            </graphic>
+        </TitledPane>
+
+        <!-- Education Section -->
+        <TitledPane expanded="false" onMouseClicked="#OnMouseClickedEduBtn" styleClass="custom-titled-pane" text="Education">
+            <content>
+                <VBox fx:id="educationVBox">
+                    <!-- Each education entry will be added here programmatically -->
+                </VBox>
+            </content>
+            <graphic>
+                <HBox alignment="CENTER_RIGHT" spacing="5">
+                    <FontAwesomeIconView glyphName="BOOK" size="18" styleClass="edit-icon" />
+                </HBox>
+            </graphic>
+        </TitledPane>
+
+        <!-- Skills Section -->
+        <TitledPane expanded="false" onMouseClicked="#OnMouseClickedSkillBtn" styleClass="custom-titled-pane" text="Skills">
+            <content>
+                <VBox fx:id="skillsVBox">
+                    <!-- Each skill entry will be added here programmatically -->
+                </VBox>
+            </content>
+            <graphic>
+                <HBox alignment="CENTER_RIGHT" spacing="5">
+                    <FontAwesomeIconView glyphName="CROSSHAIRS" size="18" styleClass="edit-icon" />
+                </HBox>
+            </graphic>
+        </TitledPane>
+
+    </VBox>
+
+    <!-- CSS Styles -->
+    <stylesheets>
+        <URL value="@styleProfileView.css" />
+    </stylesheets>
+</AnchorPane>

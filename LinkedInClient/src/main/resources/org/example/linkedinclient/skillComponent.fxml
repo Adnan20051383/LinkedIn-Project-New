@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.linkedinclient.SkillComponentController">
+    <stylesheets>
+        <URL value="@styleAddSkillForm.css" />
+    </stylesheets>
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <Label styleClass="form-title" text="Add Skill" />
+
+                <!-- Skill Name -->
+                <VBox spacing="5.0">
+                    <Label styleClass="input-label" text="Skill" />
+                    <TextField fx:id="skillField" promptText="Enter the skill" styleClass="input-field" />
+                </VBox>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="20.0">
+                    <Button onAction="#handleCancel" styleClass="cancel-button" text="Cancel">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button onAction="#handleSave" styleClass="save-button" text="Save">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                </HBox>
+                <Label fx:id="wrongLabel" textFill="RED" visible="false">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
